@@ -8,7 +8,7 @@ char *read_args(void)
 {
 	if (getline(&cmd, &buf, stdin) == -1)
 	{
-		if(feof(stdin))
+		if (feof(stdin))
 		{
 			free(cmd);
 			exit(EXIT_SUCCESS);
@@ -20,5 +20,5 @@ char *read_args(void)
 			exit(EXIT_FAILURE);
 		}
 	}
-	return(cmd);
+	return (cmd);
 }

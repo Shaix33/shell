@@ -23,7 +23,7 @@ char split_args(char *cmd)
 		}
 		tokens[x] = token;
 		x++;
-		if ( x >= buffsize)
+		if (x >= buffsize)
 		{
 			buffsize += buffsize;
 			tokens = realloc(tokens, buffsize * sizeof(char *));
@@ -36,5 +36,5 @@ char split_args(char *cmd)
 		token = strtok(NULL, delimiter);
 	}
 	tokens[x] = NULL;
-	return (tokens)
-		
+	return (tokens);
+}
