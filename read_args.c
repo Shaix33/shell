@@ -6,6 +6,7 @@
  */
 char *read_args(void)
 {
+	char *cmd = NULL, *buf = "\t\r\n\a";
 	if (getline(&cmd, &buf, stdin) == -1)
 	{
 		if (feof(stdin))
